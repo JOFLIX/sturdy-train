@@ -4,7 +4,7 @@
 
 {% block body_class_override %}white{% endblock %}
 {% block content %}
-<div class="row auth-form" style="padding-top:17%">
+<div class="row auth-form" style="padding-top:17%; content-align:center">
   <div class="col-xs-12">
     <form action="{% url 'signup' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
