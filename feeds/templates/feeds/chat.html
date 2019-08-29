@@ -4,7 +4,7 @@
 
 {% block body_class_override %}white{% endblock %}
 {% block content %}
-  <div id="messages" style="padding-top:17%">
+  <div id="messages" style="padding-top:4%; padding-bottom:4%">
     {% for message in messages %}
       <div class="{% if request.user == message.sender %}message-sent{% else %}message-received{% endif %}">
         {% if request.user != message.sender %}<div class="sender">{{ message.sender.username }}</div>{% endif %}
@@ -14,7 +14,7 @@
   </div>
 
   <form id="chatForm">
-    <div id="chatData" style="display: none">
+    <div id="chatData" style="display: none; background-color: slightblue">
       <span id="session-key">{{ request.session.session_key }}</span>
       <span id="user">{{ request.user.username }}</span>
     </div>
