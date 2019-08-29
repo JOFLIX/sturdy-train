@@ -62,7 +62,7 @@
           </a>
         {% else %}
           <div class="navbar-header">
-              <a href="/" class="navbar-brand">Django IG</a>
+              <a href="/" class="navbar-brand"><i class="fa fa-instagram">|</i><span>InstaDjango</span></a>
               <a href="{% url 'login' %}" class="navbar-brand">Login</a>
               <a href="{% url 'signup' %}" class="navbar-brand">Signup</a>
           </div>
@@ -76,7 +76,7 @@
 <div class="navbar navbar-default navbar-fixed-top visible-xs" id="mobile-top-nav">
   {% if request.resolver_match.url_name == 'index' %}
     <div class="navbar-header">
-        <a href="/" class="navbar-brand">Django IG</a>
+        <a href="/" class="navbar-brand"><i class="fa fa-instagram">|</i><span>InstaDjango</span></a>
         <a href="{% url 'inbox' %}"><i class="fa fa-inbox active item-right" aria-hidden="true"></i></a>
     </div>
   {% elif request.resolver_match.url_name == 'post' or request.resolver_match.url_name == 'post_picture' or request.resolver_match.url_name == 'chat' %}
@@ -86,7 +86,7 @@
     <a class="new-message" href="{% url 'new_chat' %}"><i class="fa fa-plus active"></i></a>
   {% else %}
     <div class="navbar-header">
-        <a href="/" class="navbar-brand">Django IG</a>
+        <a href="/" class="navbar-brand"><i class="fa fa-instagram">|</i><span>InstaDjango</span></a>
     </div>
   {% endif %}
 </div>
