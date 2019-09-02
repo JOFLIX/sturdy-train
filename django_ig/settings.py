@@ -163,3 +163,9 @@ try:
     from local_settings import *
 except ImportError as e:
     pass
+
+
+# This is the conventional deployment method
+django_heroku.settings(locals())
+# This is new: a hacky workaround to get dj_database_url to forget about SSL at the last second.
+del DATABASES['default']['OPTIONS']['sslmode']
