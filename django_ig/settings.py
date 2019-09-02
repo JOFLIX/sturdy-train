@@ -11,9 +11,10 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-import django_heroku
 import dj_database_url
 import dotenv
+import django_heroku
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -99,19 +100,14 @@ WSGI_APPLICATION = 'django_ig.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-# load database from the DATABASE_URL environment variable
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
-
+DATABASES = {
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'instapic',
+        'USER': 'moringa-school',
+        'PASSWORD':111,
+   }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -136,15 +132,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+TIME_ZONE = 'Africa/Nairobi'
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
@@ -165,9 +156,4 @@ try:
     from local_settings import *
 except ImportError as e:
     pass
-
-
-# This is the conventional deployment method
 django_heroku.settings(locals())
-# This is new: a hacky workaround to get dj_database_url to forget about SSL at the last second.
-del DATABASES['default']['OPTIONS']['sslmode']
