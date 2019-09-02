@@ -103,7 +103,7 @@ WSGI_APPLICATION = 'django_ig.wsgi.application'
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'instapic',
+        'NAME': 'instadjango',
         'USER': 'moringa-school',
         'PASSWORD':111,
    }
