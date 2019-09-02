@@ -14,11 +14,13 @@
   </div>
 
   <form id="chatForm">
-    <div id="chatData" style="display: none; background-color: slightblue">
+    <div id="chatData" style="display: none; background-color:lightblue">
       <span id="session-key">{{ request.session.session_key }}</span>
+
       <span id="user">{{ request.user.username }}</span>
     </div>
-    <input type="text" id="messageInput" placeholder="Write a message...">
+    <input type="text" id="messageInput" placeholder="Write a message to {{request.user.username}}...">
+
   </form>
 
 {% endblock %}
