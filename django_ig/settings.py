@@ -27,7 +27,7 @@ SECRET_KEY = 'l^c#b-(+&hq)*6p#!ot_iez+_j%d!0euiw2s9$+y@8s_i@_kyp'
 DEBUG = True
 
 # ALL: Change for production
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','https://boiling-journey-66900.herokuapp.com']
 
 
 # Application definition
