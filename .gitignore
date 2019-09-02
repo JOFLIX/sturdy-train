@@ -96,3 +96,4 @@ static/posts/
 db.sqlite3
 media/
 style.css.map
+.env
