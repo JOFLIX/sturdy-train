@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'imagekit',
     'annoying',
     'feeds',
+    'webpush',
 ]
 
 MIDDLEWARE_CLASSES = [
