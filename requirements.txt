@@ -23,7 +23,7 @@ idna==2.8
 msgpack-python==0.4.7
 olefile==0.46
 pilkit==2.0
-Pillow==4.0.0
+Pillow==6.2.0
 psycopg2==2.8.3
 py-vapid==1.7.0
 pycparser==2.19
